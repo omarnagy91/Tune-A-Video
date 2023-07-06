@@ -1,24 +1,21 @@
 pretrained_model_path: "./checkpoints/stable-diffusion-v1-4"
-output_dir: "./outputs/man-surfing"
+output_dir: "./outputs/x1"
 
 train_data:
-  video_path: "data/man-surfing.mp4"
-  prompt: "a man is surfing"
+  video_path: "data/x1.mp4"
+  prompt: "a man singing and dancing in a park"
   n_sample_frames: 24
-  width: 512
-  height: 512
+  width: 540
+  height: 960
   sample_start_idx: 0
-  sample_frame_rate: 1
+  sample_frame_rate: 2
 
 validation_data:
   prompts:
-    - "a panda is surfing"
-    - "a boy, wearing a birthday hat, is surfing"
-    - "a raccoon is surfing, cartoon style"
-    - "Iron Man is surfing in the desert"
+    - "a panda singing and dancing in a park"
   video_length: 24
-  width: 512
-  height: 512
+  width: 540
+  height: 960
   num_inference_steps: 50
   guidance_scale: 12.5
   use_inv_latent: True

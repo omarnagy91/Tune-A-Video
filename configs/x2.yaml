@@ -1,24 +1,21 @@
 pretrained_model_path: "./checkpoints/stable-diffusion-v1-4"
-output_dir: "./outputs/car-turn"
+output_dir: "./outputs/x2"
 
 train_data:
-  video_path: "data/car-turn.mp4"
-  prompt: "a jeep car is moving on the road"
+  video_path: "data/x2.mp4"
+  prompt: "a man singing and dancing in a park"
   n_sample_frames: 24
-  width: 512
-  height: 512
+  width: 540
+  height: 960
   sample_start_idx: 0
   sample_frame_rate: 2
 
 validation_data:
   prompts:
-    - "a jeep car is moving on the beach"
-    - "a jeep car is moving on the snow"
-    - "a jeep car is moving on the road, cartoon style"
-    - "a sports car is moving on the road"
+    - "a tree singing and dancing in a park"
   video_length: 24
-  width: 512
-  height: 512
+  width: 540
+  height: 960
   num_inference_steps: 50
   guidance_scale: 12.5
   use_inv_latent: True

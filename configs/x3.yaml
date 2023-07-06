@@ -1,24 +1,21 @@
 pretrained_model_path: "./checkpoints/stable-diffusion-v1-4"
-output_dir: "./outputs/rabbit-watermelon"
+output_dir: "./outputs/x3"
 
 train_data:
-  video_path: "data/rabbit-watermelon.mp4"
-  prompt: "a rabbit is eating a watermelon"
+  video_path: "data/x3.mp4"
+  prompt: "a man singing and dancing in a park"
   n_sample_frames: 24
-  width: 512
-  height: 512
+  width: 540
+  height: 960
   sample_start_idx: 0
   sample_frame_rate: 2
 
 validation_data:
   prompts:
-    - "a tiger is eating a watermelon"
-    - "a rabbit is eating an orange"
-    - "a rabbit is eating a pizza"
-    - "a puppy is eating an orange"
+    - "iron man singing and dancing in a park"
   video_length: 24
-  width: 512
-  height: 512
+  width: 540
+  height: 960
   num_inference_steps: 50
   guidance_scale: 12.5
   use_inv_latent: True
