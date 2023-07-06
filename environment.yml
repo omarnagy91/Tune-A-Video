@@ -5,13 +5,10 @@ dependencies:
   - keras
   - tensorflow-gpu
   - tensorflow-estimator
-  - bitsandbytes
-  - transformers
+  - bitsandbytes==0.35.4
+  - transformers==4.26.0
   - triton
-  - torch
-  - torchvision
-  - diffusers[torch]
-  - decord
+  - diffusers[torch]==0.11.1
   - accelerate
   - tensorboard
   - modelcards
@@ -19,4 +16,10 @@ dependencies:
   - einops
   - imageio
   - ftfy
-  - tensorrt
+  - pip
+  - pip:
+    - tensorrt
+    - decord==0.6.0
+    - torch==1.12.1
+    - bitsandbytes==0.35.4
+    - torchvision==0.13.1
